@@ -26,7 +26,7 @@ bash setup.sh
    - Windows: `setx OPENAI_API_KEY sk-your-key-here` (then restart terminal)
    - macOS: `export OPENAI_API_KEY=sk-your-key-here` (add to `~/.zshrc`)
 
-2. **Fill in your profile**: Edit `20_context/self/owner.md` with your name, role, and interests
+2. **Fill in your profile**: Edit `20_structure/02_context/self/owner.md` with your name, role, and interests
 
 3. **Open in Obsidian**: Open Obsidian → "Open folder as vault" → select this folder
 
@@ -36,17 +36,19 @@ bash setup.sh
 
 ```
 life-os-starter/
-├── 10_notes/                    All timestamped notes (tasks, interactions, entries, references)
-├── 20_context/
-│   ├── entity/                  People, companies, places
-│   ├── projects/                Project definitions
-│   ├── anniversaries/           Birthdays, weddings, recurring dates
-│   ├── chores/                  Recurring household tasks
-│   ├── self/                    Your profile, writing style (agent reads this)
-│   ├── templates/               15 note templates
-│   └── life-os-schema.md        Full schema specification (v8.5)
-├── 90_attachments/              Images, files
-└── AGENTS.md                    Agent instructions (Codex CLI reads this)
+├── 10_notes/                        All timestamped notes (tasks, interactions, entries, references)
+├── 20_structure/
+│   ├── 01_system/
+│   │   ├── docs/                    Schema specification (life-os-schema.md)
+│   │   └── templates/               15 note templates
+│   └── 02_context/
+│       ├── entity/                  People, companies, places
+│       ├── projects/                Project definitions
+│       ├── anniversaries/           Birthdays, weddings, recurring dates
+│       ├── chores/                  Recurring household tasks
+│       └── self/                    Your profile, writing style (agent reads this)
+├── 90_attachments/                  Images, files
+└── AGENTS.md                        Agent instructions (Codex CLI reads this)
 ```
 
 ## 11 Note Types
@@ -91,7 +93,7 @@ Draft an email to John about next week's planning
 
 ## Personalize Your Vault
 
-The agent reads `20_context/self/` to understand who you are:
+The agent reads `20_structure/02_context/self/` to understand who you are:
 
 - **`owner.md`** — Your name, role, tech stack, interests. Fill this in first.
 - **`schrijfstijl.md`** — Your writing style for emails and messages. Add examples of how you write so the agent can match your tone.
@@ -100,7 +102,7 @@ The agent reads `20_context/self/` to understand who you are:
 
 The `AGENTS.md` file teaches the AI agent your vault structure and schema. When you run `codex` in this folder, it reads those instructions and can create, read, and update your notes — all as plain markdown files that sync with Obsidian.
 
-The full schema is documented in `20_context/life-os-schema.md`, synced from [life-os-schema](https://github.com/viggomeesters/life-os-schema).
+The full schema is documented in `20_structure/01_system/docs/life-os-schema.md`, synced from [life-os-schema](https://github.com/viggomeesters/life-os-schema).
 
 ## Learn More
 

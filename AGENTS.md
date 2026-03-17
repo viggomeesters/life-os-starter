@@ -3,38 +3,38 @@
 You are working inside an Obsidian vault that serves as a personal knowledge base, task manager, and CRM.
 
 **Before doing anything**, read these files for context:
-- `20_context/life-os-schema.md` — full schema specification for all 11 note types
-- `20_context/self/owner.md` — who the vault owner is
-- `20_context/self/schrijfstijl.md` — writing style for drafting messages
+- `20_structure/01_system/docs/life-os-schema.md` — full schema specification for all 11 note types
+- `20_structure/02_context/self/owner.md` — who the vault owner is
+- `20_structure/02_context/self/schrijfstijl.md` — writing style for drafting messages
 
 ## Vault Structure
 
 | Folder | What goes here | Filename pattern |
 |--------|---------------|-----------------|
 | `10_notes/` | All timestamped notes (tasks, interactions, entries, references, health, purchases) | `YYYYMMDD-HHmm-slug.md` |
-| `20_context/entity/` | People, companies, pets, products, places | `slug.md` |
-| `20_context/projects/` | Project definitions | `YYYY-MM-slug.md` |
-| `20_context/anniversaries/` | Recurring dates (birthdays, weddings) | `MM-DD-category-entity.md` |
-| `20_context/chores/` | Recurring household tasks | `category-frequency-slug.md` |
-| `20_context/self/` | Personal context docs (owner profile, writing style) | `slug.md` |
-| `20_context/templates/` | Note templates (do not modify) | — |
+| `20_structure/02_context/entity/` | People, companies, pets, products, places | `slug.md` |
+| `20_structure/02_context/projects/` | Project definitions | `YYYY-MM-slug.md` |
+| `20_structure/02_context/anniversaries/` | Recurring dates (birthdays, weddings) | `MM-DD-category-entity.md` |
+| `20_structure/02_context/chores/` | Recurring household tasks | `category-frequency-slug.md` |
+| `20_structure/02_context/self/` | Personal context docs (owner profile, writing style) | `slug.md` |
+| `20_structure/01_system/templates/` | Note templates (do not modify) | — |
 | `90_attachments/` | Images, files | — |
 
 ## 11 Note Types
 
 | Type | Purpose | Location | Key fields |
 |------|---------|----------|------------|
-| `entity` | People, companies, products | `20_context/entity/` | `category`, `first_name`, `last_name`, `contact_frequency` |
+| `entity` | People, companies, products | `20_structure/02_context/entity/` | `category`, `first_name`, `last_name`, `contact_frequency` |
 | `interaction` | Calls, meetings, chats, mail | `10_notes/` | `category` (call/irl/chat/mail/letter), `entity` (required) |
 | `task` | Actions to complete | `10_notes/` | `status`, `area`, `project`, `entity`, `due` |
-| `project` | Container for tasks | `20_context/projects/` | `status`, `area`, `start_date` |
+| `project` | Container for tasks | `20_structure/02_context/projects/` | `status`, `area`, `start_date` |
 | `reference` | Bookmarks, articles, books, media | `10_notes/` | `category`, `url` |
 | `entry` | Journals, notes, reflections | `10_notes/` | `category` (daily/weekly/note/reflection) |
 | `health` | Migraine, weight, blood pressure | `10_notes/` | `category`, `date` |
 | `purchase` | Items bought | `10_notes/` | `amount`, `store` |
-| `anniversary` | Recurring dates | `20_context/anniversaries/` | `entity`, `date`, `recurring` |
-| `chore` | Recurring household tasks | `20_context/chores/` | `nature`, `frequency`, `duration` |
-| `context` | Personal background docs | `20_context/self/` | (freeform) |
+| `anniversary` | Recurring dates | `20_structure/02_context/anniversaries/` | `entity`, `date`, `recurring` |
+| `chore` | Recurring household tasks | `20_structure/02_context/chores/` | `nature`, `frequency`, `duration` |
+| `context` | Personal background docs | `20_structure/02_context/self/` | (freeform) |
 
 ## Core Frontmatter Fields
 
@@ -95,8 +95,8 @@ The last H2 status header determines the current status.
 
 ## Rules
 
-1. Always read `20_context/self/owner.md` and `20_context/self/schrijfstijl.md` before drafting any message
-2. Always use frontmatter on every note — refer to `20_context/life-os-schema.md` for the full field spec
+1. Always read `20_structure/02_context/self/owner.md` and `20_structure/02_context/self/schrijfstijl.md` before drafting any message
+2. Always use frontmatter on every note — refer to `20_structure/01_system/docs/life-os-schema.md` for the full field spec
 3. Use `[[wikilinks]]` for cross-references, never markdown links for internal notes
 4. Write in the user's language (default: English) unless asked otherwise
 5. When creating tasks, set `status: 🔴 to-do` and include a `## 🔴 to-do` section in the body
