@@ -1,15 +1,16 @@
 ---
-type: reference
-category: guide
+type: anniversary
+category: birthday
 created: {{date:YYYY-MM-DD}}
 slug: {{slug}}
 timestamp: {{date:YYYYMMDD-HHmm}}
-area: self
+area: social
 title: "{{title}}"
 topics: []
 
-url:
-description:
+date: {{date:YYYY-MM-DD}}
+entity: [{{entity}}]
+recurring: 365
 ---
 
 # {{title}}

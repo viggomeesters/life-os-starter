@@ -34,44 +34,69 @@ bash setup.sh
 
 ```
 life-os-starter/
-├── notes/          Task, meeting notes, journal entries
-├── projects/       Project definitions
-├── entities/       People, companies, places
-├── resources/      Bookmarks, articles, references
-├── inbox/          Quick captures
-├── templates/      Note templates
-├── AGENTS.md       Agent instructions (Codex CLI reads this)
-└── schema.md       Frontmatter reference
+├── notes/              All timestamped notes (tasks, interactions, entries, references)
+├── entities/           People, companies, places
+├── projects/           Project definitions
+├── anniversaries/      Birthdays, weddings, recurring dates
+├── chores/             Recurring household tasks
+├── self/               Personal context docs
+├── templates/          15 note templates
+├── attachments/        Images, files
+├── AGENTS.md           Agent instructions (Codex CLI reads this)
+└── life-os-schema.md   Full schema specification (v8.5)
 ```
 
-## 5 Note Types
+## 11 Note Types
 
 | Type | What | Example |
 |------|------|---------|
 | **task** | Something to do | "Next.js project opzetten" |
-| **note** | A thought or meeting note | "Kickoff meeting met Quinten" |
+| **interaction** | A call, meeting, or chat | "Kickoff meeting met Quinten" |
+| **entry** | A journal entry or note | "Dagboek 17 maart" |
+| **reference** | A bookmark or article | "Portfolio Design Inspiratie" |
 | **project** | Groups related tasks | "Personal Website" |
 | **entity** | A person or company | "Quinten de Vries" |
-| **resource** | A bookmark or reference | "Portfolio Design Inspiratie" |
+| **health** | A health log | Migraine, weight, blood pressure |
+| **purchase** | Something you bought | Electronics, furniture |
+| **anniversary** | A recurring date | Birthdays, weddings |
+| **chore** | A recurring task | Weekly cleaning, daily routines |
+| **context** | Personal background | About you, for the agent |
 
-Every note has YAML frontmatter with `type`, `topics`, and `[[wikilinks]]` to connect things together.
+Every note has YAML frontmatter and uses `[[wikilinks]]` to connect things together.
 
 ## Try These Prompts
 
 Once `codex` is running, try:
 
-- "Maak een taak aan: deployment pipeline opzetten, p1, voor het personal-website project"
-- "Welke taken staan er open?"
-- "Maak een entity aan voor mijn collega Jan Bakker, developer bij Acme Agency"
-- "Wat weet je over het personal-website project?"
-- "Maak een meeting note van ons gesprek vandaag"
+```
+Maak een taak aan: deployment pipeline opzetten, p1, voor het personal-website project
+
+Welke taken staan er open?
+
+Log een meeting met Quinten — we hebben de vault structuur besproken
+
+Maak een entity aan voor mijn collega Jan Bakker, developer bij Acme Agency
+
+Wat weet je over het personal-website project? Welke taken hangen eraan?
+
+Zoek alle notes met topic "webdev"
+
+Markeer de taak "boodschappen doen" als done
+```
 
 ## How It Works
 
-The `AGENTS.md` file teaches the AI agent your vault structure. When you run `codex` in this folder, it reads those instructions and can create, read, and update your notes — all as plain markdown files that sync with Obsidian.
+The `AGENTS.md` file teaches the AI agent your vault structure and schema. When you run `codex` in this folder, it reads those instructions and can create, read, and update your notes — all as plain markdown files that sync with Obsidian.
+
+The full schema is documented in `life-os-schema.md`, synced from [life-os-schema](https://github.com/viggomeesters/life-os-schema).
 
 ## Learn More
 
+- [CLI Agents Guide](https://viggomeestersnl.vercel.app/cli-agents-guide/) — Full guide on CLI agents + Obsidian
 - [Obsidian](https://obsidian.md) — The knowledge base app
 - [Codex CLI](https://github.com/openai/codex) — OpenAI's terminal agent
-- [CLI Agents Guide](https://viggomeestersnl.vercel.app/cli-agents-guide/) — Full guide on CLI agents
+- [Life OS Schema](https://github.com/viggomeesters/life-os-schema) — Full schema specification
+
+## License
+
+MIT

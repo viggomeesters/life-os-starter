@@ -1,25 +1,26 @@
 ---
-type: note
+type: interaction
+category: irl
 created: 2026-03-17
 slug: 20260317-0900-meeting-quinten-kickoff
+timestamp: 20260317-0900
 title: "Kickoff meeting met Quinten"
-topics: [meeting, cli-agents, obsidian]
-category: meeting
+topics: [cli-agents, obsidian, onboarding]
 area: work
+entity: [quinten-de-vries]
+project: 2026-03-personal-website
 ---
 
-## Meeting Notes
+# Kickoff meeting met Quinten
 
-Onderwerp: Quinten helpen met CLI agents + Obsidian setup.
-
-### Besproken
+## Besproken
 
 - Obsidian vault structuur uitgelegd
 - Codex CLI geinstalleerd
 - Eerste taken aangemaakt via de agent
 - Link delen: vault als knowledge base voor agent context
 
-### Acties
+## Acties
 
-- [[20260317-1000-setup-nextjs-project]] — Quinten gaat zijn eerste project opzetten
-- [[quinten-de-vries]] begint met eigen vault
+- [[20260317-1000-setup-nextjs-project]] — [[quinten-de-vries]] gaat zijn eerste project opzetten
+- Vault schema doorlopen

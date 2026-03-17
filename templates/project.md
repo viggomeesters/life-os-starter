@@ -1,18 +1,39 @@
 ---
 type: project
-created: {{date}}
+category: personal
+created: {{date:YYYY-MM-DD}}
 slug: {{slug}}
+code:
+timestamp: {{date:YYYYMMDD-HHmm}}
+status: 🔴 to-do
+area: self
 title: "{{title}}"
 topics: []
-status: active
-area: work
-start_date: {{date}}
+
+start_date: {{date:YYYY-MM-DD}}
+end_date:
+local_path:
+url:
+description: {{description}}
 ---
 
-## Description
+# {{title}}
 
 {{description}}
 
+## Features
+
+| ID | Feature | Description |
+| :--- | :--- | :--- |
+| **F01** | {{feature}} | {{feature_description}} |
+
 ## Tasks
 
-<!-- Tasks linked via project: {{slug}} -->
+- [ ]
+
+## Session Logs
+
+### {{date:YYYY-MM-DD HH:mm}} - [Subject]
+- **Prompt**:
+- **Plan**:
+- **Result**:

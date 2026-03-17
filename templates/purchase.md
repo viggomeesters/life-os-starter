@@ -1,15 +1,21 @@
 ---
-type: reference
-category: guide
+type: purchase
+category: electronics
 created: {{date:YYYY-MM-DD}}
 slug: {{slug}}
 timestamp: {{date:YYYYMMDD-HHmm}}
-area: self
+area: home
 title: "{{title}}"
 topics: []
 
+amount:
+currency: EUR
+brand:
+model:
+store:
 url:
-description:
+warranty_until:
+entity: []
 ---
 
 # {{title}}

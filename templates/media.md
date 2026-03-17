@@ -1,6 +1,6 @@
 ---
 type: reference
-category: guide
+category: book
 created: {{date:YYYY-MM-DD}}
 slug: {{slug}}
 timestamp: {{date:YYYYMMDD-HHmm}}
@@ -8,8 +8,10 @@ area: self
 title: "{{title}}"
 topics: []
 
+author:
 url:
-description:
+rating:
+consumed:
 ---
 
 # {{title}}

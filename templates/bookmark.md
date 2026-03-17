@@ -1,6 +1,6 @@
 ---
 type: reference
-category: guide
+category: bookmark
 created: {{date:YYYY-MM-DD}}
 slug: {{slug}}
 timestamp: {{date:YYYYMMDD-HHmm}}
@@ -8,8 +8,15 @@ area: self
 title: "{{title}}"
 topics: []
 
-url:
-description:
+url: {{url}}
+description: {{description}}
+favicon: {{favicon}}
 ---
 
 # {{title}}
+
+{{description}}
+
+{{image}}
+
+{{content}}

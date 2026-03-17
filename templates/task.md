@@ -1,17 +1,20 @@
 ---
 type: task
-created: {{date}}
+category: screen
+created: {{date:YYYY-MM-DD}}
 slug: {{slug}}
+timestamp: {{date:YYYYMMDD-HHmm}}
+status: 🔴 to-do
+area: work
 title: "{{title}}"
 topics: []
-status: to-do
-priority: p2
-area: work
-project:
+
+project: {{project}}
 entity: []
-due:
+due: {{due}}
+recurring:
 ---
 
-## to-do
+## 🔴 to-do - {{date:DD MMM YYYY [at] HH:mm}}
 
 {{description}}

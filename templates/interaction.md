@@ -1,15 +1,17 @@
 ---
-type: reference
-category: guide
+type: interaction
+category: call
 created: {{date:YYYY-MM-DD}}
 slug: {{slug}}
 timestamp: {{date:YYYYMMDD-HHmm}}
-area: self
+area: social
 title: "{{title}}"
 topics: []
 
-url:
-description:
+entity: [{{entity}}]
+duration:
+location:
+platform:
 ---
 
 # {{title}}
