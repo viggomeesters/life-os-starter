@@ -2,57 +2,57 @@
 type: context
 category: self
 created: 2026-03-17
-title: "Schrijfstijl"
+title: "Writing Style"
 slug: schrijfstijl
 timestamp: 20260317-0800
 area: self
 ---
 
-# Schrijfstijl
+# Writing Style
 
-Beschrijf hier je schrijfstijl zodat de agent e-mails en berichten kan opstellen die klinken als jij.
+Describe your writing style here so the agent can draft emails and messages that sound like you.
 
-## Kernprincipes
+## Core principles
 
-- [bijv. Direct en zakelijk, geen omhaal]
-- [bijv. Beleefd maar niet onderdanig]
-- [bijv. Geen uitroeptekens]
+- [e.g. Direct and professional, no fluff]
+- [e.g. Polite but not submissive]
+- [e.g. No exclamation marks]
 
-## Taal
+## Language
 
-| Context | Taal |
-|---------|------|
-| Collega's | [bijv. Nederlands] |
-| Internationale contacten | [bijv. Engels] |
+| Context | Language |
+|---------|----------|
+| Colleagues | [e.g. English] |
+| International contacts | [e.g. English] |
 
 ## Opening
 
-- Aanhef: [bijv. "Hoi {voornaam},"]
-- Eerste zin: [bijv. direct ter zake, actie + reden]
+- Greeting: [e.g. "Hi {first name},"]
+- First sentence: [e.g. get straight to the point, action + reason]
 
-## Afsluiting
+## Closing
 
-| Niveau | Formule |
-|--------|---------|
-| Standaard | [bijv. "Groet, {naam}"] |
-| Formeel | [bijv. "Met vriendelijke groet, {naam}"] |
+| Level | Formula |
+|-------|---------|
+| Standard | [e.g. "Thanks, {name}"] |
+| Formal | [e.g. "Best regards, {name}"] |
 
-## Stijlregels
+## Style rules
 
-- [bijv. Korte alinea's, max 3-4 zinnen]
-- [bijv. Bullets zonder punt aan het einde]
-- [bijv. Geen emotionele franje]
-- [bijv. Berichten altijd in een code block voor copy-paste]
+- [e.g. Short paragraphs, max 3-4 sentences]
+- [e.g. Bullet points without trailing periods]
+- [e.g. No emotional fluff]
+- [e.g. Messages I need to copy-paste always in a code block]
 
-## Voorbeeld
+## Example
 
 ```
-[Plak hier een e-mail die je typisch zou sturen,
-zodat de agent je toon leert kennen]
+[Paste a typical email you'd send here,
+so the agent can learn your tone]
 ```
 
-## Agent-instructies
+## Agent instructions
 
-- Pas deze schrijfstijl toe op alle gegenereerde berichten
-- Bij twijfel over toon: zakelijk en direct
-- Berichten die ik moet copy-pasten altijd in een code block
+- Apply this writing style to all generated messages
+- When in doubt about tone: professional and direct
+- Messages I need to copy-paste always in a code block

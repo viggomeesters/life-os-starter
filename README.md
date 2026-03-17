@@ -36,29 +36,29 @@ bash setup.sh
 
 ```
 life-os-starter/
-├── 10_notes/                All timestamped notes (tasks, interactions, entries, references)
+├── 10_notes/                    All timestamped notes (tasks, interactions, entries, references)
 ├── 20_context/
-│   ├── entity/              People, companies, places
-│   ├── projects/            Project definitions
-│   ├── anniversaries/       Birthdays, weddings, recurring dates
-│   ├── chores/              Recurring household tasks
-│   └── self/                Your profile, writing style (agent reads this)
-├── templates/               15 note templates
-├── 90_attachments/          Images, files
-├── AGENTS.md                Agent instructions (Codex CLI reads this)
-└── life-os-schema.md        Full schema specification (v8.5)
+│   ├── entity/                  People, companies, places
+│   ├── projects/                Project definitions
+│   ├── anniversaries/           Birthdays, weddings, recurring dates
+│   ├── chores/                  Recurring household tasks
+│   ├── self/                    Your profile, writing style (agent reads this)
+│   ├── templates/               15 note templates
+│   └── life-os-schema.md        Full schema specification (v8.5)
+├── 90_attachments/              Images, files
+└── AGENTS.md                    Agent instructions (Codex CLI reads this)
 ```
 
 ## 11 Note Types
 
 | Type | What | Example |
 |------|------|---------|
-| **task** | Something to do | "Next.js project opzetten" |
-| **interaction** | A call, meeting, or chat | "Kickoff meeting met Quinten" |
-| **entry** | A journal entry or note | "Dagboek 17 maart" |
-| **reference** | A bookmark or article | "Portfolio Design Inspiratie" |
+| **task** | Something to do | "Set up Next.js project" |
+| **interaction** | A call, meeting, or chat | "Kickoff meeting with Jane" |
+| **entry** | A journal entry or note | "Journal March 17" |
+| **reference** | A bookmark or article | "Portfolio Design Inspiration" |
 | **project** | Groups related tasks | "Personal Website" |
-| **entity** | A person or company | "Quinten de Vries" |
+| **entity** | A person or company | "Jane Smith" |
 | **health** | A health log | Migraine, weight, blood pressure |
 | **purchase** | Something you bought | Electronics, furniture |
 | **anniversary** | A recurring date | Birthdays, weddings |
@@ -72,21 +72,21 @@ Every note has YAML frontmatter and uses `[[wikilinks]]` to connect things toget
 Once `codex` is running, try:
 
 ```
-Maak een taak aan: deployment pipeline opzetten, p1, voor het personal-website project
+Create a task: set up deployment pipeline, p1, for the personal-website project
 
-Welke taken staan er open?
+What tasks are open?
 
-Log een meeting met Quinten — we hebben de vault structuur besproken
+Log a meeting with Jane — we discussed the vault structure
 
-Maak een entity aan voor mijn collega Jan Bakker, developer bij Acme Agency
+Create an entity for my colleague John Baker, developer at Example Company
 
-Wat weet je over het personal-website project? Welke taken hangen eraan?
+What do you know about the personal-website project? What tasks are linked to it?
 
-Zoek alle notes met topic "webdev"
+Find all notes with topic "webdev"
 
-Markeer de taak "boodschappen doen" als done
+Mark the task "get groceries" as done
 
-Stel een e-mail op voor Jan over de planning van volgende week
+Draft an email to John about next week's planning
 ```
 
 ## Personalize Your Vault
@@ -100,7 +100,7 @@ The agent reads `20_context/self/` to understand who you are:
 
 The `AGENTS.md` file teaches the AI agent your vault structure and schema. When you run `codex` in this folder, it reads those instructions and can create, read, and update your notes — all as plain markdown files that sync with Obsidian.
 
-The full schema is documented in `life-os-schema.md`, synced from [life-os-schema](https://github.com/viggomeesters/life-os-schema).
+The full schema is documented in `20_context/life-os-schema.md`, synced from [life-os-schema](https://github.com/viggomeesters/life-os-schema).
 
 ## Learn More
 

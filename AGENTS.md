@@ -3,7 +3,7 @@
 You are working inside an Obsidian vault that serves as a personal knowledge base, task manager, and CRM.
 
 **Before doing anything**, read these files for context:
-- `life-os-schema.md` — full schema specification for all 11 note types
+- `20_context/life-os-schema.md` — full schema specification for all 11 note types
 - `20_context/self/owner.md` — who the vault owner is
 - `20_context/self/schrijfstijl.md` — writing style for drafting messages
 
@@ -17,7 +17,7 @@ You are working inside an Obsidian vault that serves as a personal knowledge bas
 | `20_context/anniversaries/` | Recurring dates (birthdays, weddings) | `MM-DD-category-entity.md` |
 | `20_context/chores/` | Recurring household tasks | `category-frequency-slug.md` |
 | `20_context/self/` | Personal context docs (owner profile, writing style) | `slug.md` |
-| `templates/` | Note templates (do not modify) | — |
+| `20_context/templates/` | Note templates (do not modify) | — |
 | `90_attachments/` | Images, files | — |
 
 ## 11 Note Types
@@ -71,13 +71,13 @@ entity: []            # Linked entity slugs (always array)
 
 ## Linking Rules
 
-- Use `[[wikilinks]]` for all internal cross-references: `[[quinten-de-vries]]`, `[[2026-03-personal-website]]`
+- Use `[[wikilinks]]` for all internal cross-references: `[[jane-smith]]`, `[[2026-03-personal-website]]`
 - Never use markdown links for internal notes
 - The `project` field links to a project slug: `project: 2026-03-personal-website`
-- The `entity` field is always an array: `entity: [quinten-de-vries]`
+- The `entity` field is always an array: `entity: [jane-smith]`
 - The `topics` field enables discovery: `topics: [typescript, frontend, review]`
 - Notes in `10_notes/` link by full filename: `[[20260317-1000-setup-nextjs-project]]`
-- Entities and projects link by slug: `[[quinten-de-vries]]`, `[[2026-03-personal-website]]`
+- Entities and projects link by slug: `[[jane-smith]]`, `[[2026-03-personal-website]]`
 
 ## Task Status Timeline
 
@@ -96,9 +96,9 @@ The last H2 status header determines the current status.
 ## Rules
 
 1. Always read `20_context/self/owner.md` and `20_context/self/schrijfstijl.md` before drafting any message
-2. Always use frontmatter on every note — refer to `life-os-schema.md` for the full field spec
+2. Always use frontmatter on every note — refer to `20_context/life-os-schema.md` for the full field spec
 3. Use `[[wikilinks]]` for cross-references, never markdown links for internal notes
-4. Write in the user's language (default: Dutch) unless asked otherwise
+4. Write in the user's language (default: English) unless asked otherwise
 5. When creating tasks, set `status: 🔴 to-do` and include a `## 🔴 to-do` section in the body
 6. When completing tasks, update status to `🟢 done` and add a `## 🟢 done` section with what was done
 7. Keep the `topics` field populated — it's how notes are discovered later

@@ -10,29 +10,29 @@ area: self
 
 # Owner Profile
 
-Vul dit bestand aan zodat de agent weet wie je bent en je beter kan helpen.
+Fill in this file so the agent knows who you are and can help you better.
 
-## Basis
+## Basics
 
-- **Naam:** [je naam]
-- **Rol:** [bijv. Developer, Designer, Student]
-- **Bedrijf:** [waar je werkt]
-- **Locatie:** [stad/land]
-- **Taal:** Nederlands (of Engels)
+- **Name:** [your name]
+- **Role:** [e.g. Developer, Designer, Student]
+- **Company:** [where you work]
+- **Location:** [city/country]
+- **Language:** English
 
-## Werk
+## Work
 
-- **Wat doe je:** [kort omschrijven]
-- **Tech stack:** [talen, frameworks, tools]
-- **Focus nu:** [waar werk je nu aan]
+- **What you do:** [brief description]
+- **Tech stack:** [languages, frameworks, tools]
+- **Current focus:** [what you're working on now]
 
-## Persoonlijk
+## Personal
 
-- **Interesses:** [hobby's, interesses]
-- **Doelen:** [waar werk je naartoe]
+- **Interests:** [hobbies, interests]
+- **Goals:** [what you're working towards]
 
-## Agent-instructies
+## Agent instructions
 
-- Schrijf berichten in mijn toon (zie [[schrijfstijl]])
-- Gebruik mijn naam bij het opstellen van e-mails
-- Ken mijn projecten en prioriteiten
+- Write messages in my tone (see [[schrijfstijl]])
+- Use my name when drafting emails
+- Know my projects and priorities

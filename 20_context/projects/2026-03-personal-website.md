@@ -17,7 +17,7 @@ url:
 
 # Personal Website
 
-Persoonlijke website bouwen met Next.js. Portfolio, blog, en contactpagina.
+Build a personal website with Next.js. Portfolio, blog, and contact page.
 
 ## Tasks
 
