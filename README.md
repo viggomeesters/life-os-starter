@@ -30,7 +30,13 @@ bash setup.sh
 
 3. **Open in Obsidian**: Open Obsidian → "Open folder as vault" → select this folder
 
-4. **Start your agent**: Open a terminal in this folder and type `codex`
+4. **Start your agent**: Open a terminal in this folder and run:
+
+   ```bash
+   codex --full-auto
+   ```
+
+   This runs Codex in full-auto mode — it reads files, creates notes, and commits changes without asking for approval on every step. If you prefer to approve each action manually, just run `codex` without the flag.
 
 ## What's Inside
 
@@ -71,7 +77,7 @@ Every note has YAML frontmatter and uses `[[wikilinks]]` to connect things toget
 
 ## Try These Prompts
 
-Once `codex` is running, try:
+Once `codex --full-auto` is running, try:
 
 ```
 Create a task: set up deployment pipeline, p1, for the personal-website project
@@ -100,7 +106,13 @@ The agent reads `20_structure/02_context/self/` to understand who you are:
 
 ## How It Works
 
-The `AGENTS.md` file teaches the AI agent your vault structure and schema. When you run `codex` in this folder, it reads those instructions and can create, read, and update your notes — all as plain markdown files that sync with Obsidian.
+The `AGENTS.md` file teaches the AI agent your vault structure and schema. When you run `codex --full-auto` in this folder, it reads those instructions and can create, read, and update your notes — all as plain markdown files that sync with Obsidian.
+
+> **Tip:** Add an alias to your shell config (`.bashrc`, `.zshrc`, or PowerShell profile) so you don't have to type the flag every time:
+>
+> ```bash
+> alias codex="codex --full-auto"
+> ```
 
 The full schema is documented in `20_structure/01_system/docs/life-os-schema.md`, synced from [life-os-schema](https://github.com/viggomeesters/life-os-schema).
 
