@@ -26,24 +26,27 @@ bash setup.sh
    - Windows: `setx OPENAI_API_KEY sk-your-key-here` (then restart terminal)
    - macOS: `export OPENAI_API_KEY=sk-your-key-here` (add to `~/.zshrc`)
 
-2. **Open in Obsidian**: Open Obsidian → "Open folder as vault" → select this folder
+2. **Fill in your profile**: Edit `20_context/self/owner.md` with your name, role, and interests
 
-3. **Start your agent**: Open a terminal in this folder and type `codex`
+3. **Open in Obsidian**: Open Obsidian → "Open folder as vault" → select this folder
+
+4. **Start your agent**: Open a terminal in this folder and type `codex`
 
 ## What's Inside
 
 ```
 life-os-starter/
-├── notes/              All timestamped notes (tasks, interactions, entries, references)
-├── entities/           People, companies, places
-├── projects/           Project definitions
-├── anniversaries/      Birthdays, weddings, recurring dates
-├── chores/             Recurring household tasks
-├── self/               Personal context docs
-├── templates/          15 note templates
-├── attachments/        Images, files
-├── AGENTS.md           Agent instructions (Codex CLI reads this)
-└── life-os-schema.md   Full schema specification (v8.5)
+├── 10_notes/                All timestamped notes (tasks, interactions, entries, references)
+├── 20_context/
+│   ├── entity/              People, companies, places
+│   ├── projects/            Project definitions
+│   ├── anniversaries/       Birthdays, weddings, recurring dates
+│   ├── chores/              Recurring household tasks
+│   └── self/                Your profile, writing style (agent reads this)
+├── templates/               15 note templates
+├── 90_attachments/          Images, files
+├── AGENTS.md                Agent instructions (Codex CLI reads this)
+└── life-os-schema.md        Full schema specification (v8.5)
 ```
 
 ## 11 Note Types
@@ -60,7 +63,7 @@ life-os-starter/
 | **purchase** | Something you bought | Electronics, furniture |
 | **anniversary** | A recurring date | Birthdays, weddings |
 | **chore** | A recurring task | Weekly cleaning, daily routines |
-| **context** | Personal background | About you, for the agent |
+| **context** | Personal background | Your profile, for the agent |
 
 Every note has YAML frontmatter and uses `[[wikilinks]]` to connect things together.
 
@@ -82,7 +85,16 @@ Wat weet je over het personal-website project? Welke taken hangen eraan?
 Zoek alle notes met topic "webdev"
 
 Markeer de taak "boodschappen doen" als done
+
+Stel een e-mail op voor Jan over de planning van volgende week
 ```
+
+## Personalize Your Vault
+
+The agent reads `20_context/self/` to understand who you are:
+
+- **`owner.md`** — Your name, role, tech stack, interests. Fill this in first.
+- **`schrijfstijl.md`** — Your writing style for emails and messages. Add examples of how you write so the agent can match your tone.
 
 ## How It Works
 

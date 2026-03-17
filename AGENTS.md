@@ -2,36 +2,39 @@
 
 You are working inside an Obsidian vault that serves as a personal knowledge base, task manager, and CRM.
 
-For the full schema specification, read `life-os-schema.md` in this repo.
+**Before doing anything**, read these files for context:
+- `life-os-schema.md` — full schema specification for all 11 note types
+- `20_context/self/owner.md` — who the vault owner is
+- `20_context/self/schrijfstijl.md` — writing style for drafting messages
 
 ## Vault Structure
 
 | Folder | What goes here | Filename pattern |
 |--------|---------------|-----------------|
-| `notes/` | All timestamped notes (tasks, interactions, entries, references, health, purchases) | `YYYYMMDD-HHmm-slug.md` |
-| `entities/` | People, companies, pets, products, places | `slug.md` |
-| `projects/` | Project definitions | `YYYY-MM-slug.md` |
-| `anniversaries/` | Recurring dates (birthdays, weddings) | `MM-DD-category-entity.md` |
-| `chores/` | Recurring household tasks | `category-frequency-slug.md` |
-| `self/` | Personal context docs | `slug.md` |
+| `10_notes/` | All timestamped notes (tasks, interactions, entries, references, health, purchases) | `YYYYMMDD-HHmm-slug.md` |
+| `20_context/entity/` | People, companies, pets, products, places | `slug.md` |
+| `20_context/projects/` | Project definitions | `YYYY-MM-slug.md` |
+| `20_context/anniversaries/` | Recurring dates (birthdays, weddings) | `MM-DD-category-entity.md` |
+| `20_context/chores/` | Recurring household tasks | `category-frequency-slug.md` |
+| `20_context/self/` | Personal context docs (owner profile, writing style) | `slug.md` |
 | `templates/` | Note templates (do not modify) | — |
-| `attachments/` | Images, files | — |
+| `90_attachments/` | Images, files | — |
 
 ## 11 Note Types
 
 | Type | Purpose | Location | Key fields |
 |------|---------|----------|------------|
-| `entity` | People, companies, products | `entities/` | `category`, `first_name`, `last_name`, `contact_frequency` |
-| `interaction` | Calls, meetings, chats, mail | `notes/` | `category` (call/irl/chat/mail/letter), `entity` (required) |
-| `task` | Actions to complete | `notes/` | `status`, `area`, `project`, `entity`, `due` |
-| `project` | Container for tasks | `projects/` | `status`, `area`, `start_date` |
-| `reference` | Bookmarks, articles, books, media | `notes/` | `category`, `url` |
-| `entry` | Journals, notes, reflections | `notes/` | `category` (daily/weekly/note/reflection) |
-| `health` | Migraine, weight, blood pressure | `notes/` | `category`, `date` |
-| `purchase` | Items bought | `notes/` | `amount`, `store` |
-| `anniversary` | Recurring dates | `anniversaries/` | `entity`, `date`, `recurring` |
-| `chore` | Recurring household tasks | `chores/` | `nature`, `frequency`, `duration` |
-| `context` | Personal background docs | `self/` | (freeform) |
+| `entity` | People, companies, products | `20_context/entity/` | `category`, `first_name`, `last_name`, `contact_frequency` |
+| `interaction` | Calls, meetings, chats, mail | `10_notes/` | `category` (call/irl/chat/mail/letter), `entity` (required) |
+| `task` | Actions to complete | `10_notes/` | `status`, `area`, `project`, `entity`, `due` |
+| `project` | Container for tasks | `20_context/projects/` | `status`, `area`, `start_date` |
+| `reference` | Bookmarks, articles, books, media | `10_notes/` | `category`, `url` |
+| `entry` | Journals, notes, reflections | `10_notes/` | `category` (daily/weekly/note/reflection) |
+| `health` | Migraine, weight, blood pressure | `10_notes/` | `category`, `date` |
+| `purchase` | Items bought | `10_notes/` | `amount`, `store` |
+| `anniversary` | Recurring dates | `20_context/anniversaries/` | `entity`, `date`, `recurring` |
+| `chore` | Recurring household tasks | `20_context/chores/` | `nature`, `frequency`, `duration` |
+| `context` | Personal background docs | `20_context/self/` | (freeform) |
 
 ## Core Frontmatter Fields
 
@@ -73,7 +76,7 @@ entity: []            # Linked entity slugs (always array)
 - The `project` field links to a project slug: `project: 2026-03-personal-website`
 - The `entity` field is always an array: `entity: [quinten-de-vries]`
 - The `topics` field enables discovery: `topics: [typescript, frontend, review]`
-- Notes in `notes/` link by full filename: `[[20260317-1000-setup-nextjs-project]]`
+- Notes in `10_notes/` link by full filename: `[[20260317-1000-setup-nextjs-project]]`
 - Entities and projects link by slug: `[[quinten-de-vries]]`, `[[2026-03-personal-website]]`
 
 ## Task Status Timeline
@@ -92,19 +95,20 @@ The last H2 status header determines the current status.
 
 ## Rules
 
-1. Always use frontmatter on every note you create — refer to `life-os-schema.md` for the full field spec
-2. Use `[[wikilinks]]` for cross-references, never markdown links for internal notes
-3. Write in the user's language (default: Dutch) unless asked otherwise
-4. When creating tasks, set `status: 🔴 to-do` and include a `## 🔴 to-do` section in the body
-5. When completing tasks, update status to `🟢 done` and add a `## 🟢 done` section with what was done
-6. Keep the `topics` field populated — it's how notes are discovered later
-7. Never delete notes — update status to `🟢 done` or `⚫ cancelled`
-8. When creating interactions, always include `entity` (required field)
-9. After making changes, commit with a descriptive message
+1. Always read `20_context/self/owner.md` and `20_context/self/schrijfstijl.md` before drafting any message
+2. Always use frontmatter on every note — refer to `life-os-schema.md` for the full field spec
+3. Use `[[wikilinks]]` for cross-references, never markdown links for internal notes
+4. Write in the user's language (default: Dutch) unless asked otherwise
+5. When creating tasks, set `status: 🔴 to-do` and include a `## 🔴 to-do` section in the body
+6. When completing tasks, update status to `🟢 done` and add a `## 🟢 done` section with what was done
+7. Keep the `topics` field populated — it's how notes are discovered later
+8. Never delete notes — update status to `🟢 done` or `⚫ cancelled`
+9. When creating interactions, always include `entity` (required field)
+10. After making changes, commit with a descriptive message
 
 ## Common Mistakes to Avoid
 
-- Do NOT create new folders — all timestamped notes go in `notes/`
+- Do NOT create new folders — all timestamped notes go in `10_notes/`
 - Do NOT use markdown links (`[text](path)`) for internal notes — use `[[wikilinks]]`
 - Do NOT put entity/project slugs in note filenames — that info lives in frontmatter
 - Do NOT forget the `entity` field on interactions — it's required for contact tracking
@@ -116,4 +120,4 @@ The last H2 status header determines the current status.
 - Find notes by topic: search for keywords in `topics` arrays
 - Find notes by entity: search for entity slugs in `entity` fields
 - Find overdue tasks: look for `due:` dates before today with `status: 🔴 to-do`
-- Find project tasks: search for `project: <slug>` across notes
+- Find project tasks: search for `project: <slug>` across `10_notes/`
